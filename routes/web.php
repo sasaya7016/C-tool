@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('products/product', 'ProductController@index');
+
+Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
+  Route::get('index', 'ContactFormController@index')->name('contact.index');
+  Route::get('create', 'ContactFormController@create')->name('contact.create');
+  Route::post('store', 'ContactFormController@store')->name('contact.store');
+  Route::get('show/{id}', 'ContactFormController@show')->name('contact.show');
+});
+
+Route::resource('contact', 'ContactFormController')->only([
+    'index', 'show'
+]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
