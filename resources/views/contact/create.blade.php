@@ -27,6 +27,10 @@
                     createです
                     <form method="POST" action="{{route('contact.store')}}">
                     @csrf
+                    画像 tableまだ
+                    <input type="file" name="imagefile" value=""/>
+                    <br>
+
                     氏名
                     <input type="text" name="your_name">
                     <br>
