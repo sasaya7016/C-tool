@@ -19,3 +19,27 @@ PHPを独学で学習して、ブログアプリを作成中です。
 * FW:  Laravel
 * DB:  phpMyAdmin (MAMP)
 * heroku ▶︎ AWSに切替予定
+
+
+
+# C-tool DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|Column|Type|Options|
+
+## postテーブル
+|Column|Type|Options|
+|------|----|-------|
+| id | bigIncrements | NO | NULL |
+| user_id | int(11) | NULL | |
+| title | varchar(255) | NULL | |
+| url | longText | NULL | |
+| image | string |     |
+|user_id|integer|null: false, foreign_key: true|
+| message | varchar(255) | NO | | NULL | |
+| created_at | timestamp | YES | | NULL | |
+| updated_at | timestamp | YES | | NULL | |
