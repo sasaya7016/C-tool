@@ -51,7 +51,7 @@ class ContactFormController extends Controller
         }
 
         $query->select('id', 'your_name', 'created_at');
-        $query->orderBy('created_at', 'asc') ; //asc->desc並び順変更
+        $query->orderBy('created_at', 'desc') ; //asc->desc並び順変更
         $contacts = $query->paginate(5);
 
         return view('contact.index',compact('contacts'));
