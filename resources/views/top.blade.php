@@ -17,7 +17,7 @@
                 <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
             </div>
             <div class="top-new">
-                <a href="#">post</a>
+                <a href="{{ url('post/create') }}">post</a>
             </div>
 
             @if (Route::has('login'))
