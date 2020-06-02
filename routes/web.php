@@ -17,7 +17,27 @@ Route::get('/', function () {
     return view('top');
 });
 
-Route::get('products/product', 'ProductController@index');
+
+Route::group(['prefix' => 'post'], function(){
+  Route::get('index', 'PostFormController@index')->name('post.index');
+  Route::get('create', 'PostFormController@create')->name('post.create');
+  Route::post('store', 'PostFormController@store')->name('post.store');
+  Route::get('show/{id}', 'PostFormController@show')->name('post.show');
+  Route::get('edit/{id}', 'PostFormController@edit')->name('post.edit');
+  Route::post('update/{id}', 'PostFormController@update')->name('post.update');
+  Route::post('destroy/{id}', 'PostFormController@destroy')->name('post.destroy');
+});
+Route::resource('post', 'PostFormController')->only([
+    'index', 'show'
+]);
+
+
+Route::group(['prefix' => 'products'], function(){
+  Route::get('index', 'ProductController@index')->name('products.index');
+});
+
+
+
 
 Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
   Route::get('index', 'ContactFormController@index')->name('contact.index');
