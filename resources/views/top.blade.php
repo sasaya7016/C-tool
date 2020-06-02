@@ -13,10 +13,14 @@
 
     <body>
         <div class="flex-center position-ref full-height">
+            <div class="top-github">
+                <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
+            </div>
+            <div class="top-new">
+                <a href="{{ url('post/create') }}">post</a>
+            </div>
+
             @if (Route::has('login'))
-                <div class="top-left">
-                    <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
-                </div>
                 <div class="top-right">
                     @auth
                         <a href="{{ url('/home') }}">Home&nbsp;</a>
@@ -33,29 +37,6 @@
             <div class="content">
                 <div class="title m-b-md">
                     Blog  C-tool
-                </div>
-
-                <!-- <div class="sub-title">
-                    便利なツール ミニアプリ一覧<br>
-                </div>
-
-                <div class="links">
-                    <a href="{{ action('ContactFormController@index') }}">
-                        <h1>Bulletin board</h1>
-                        <img src="memo.jpeg" alt="">
-                    </a> -->
-                    <!-- <a href="{{ url('/') }}">
-                        <h1>次のアプリは作成中です</h1>
-                        <img src="comingsoon.jpg" alt="">
-                    </a> -->
-
-
-                    <!-- <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a> -->
-                    <!-- <a href="https://github.com/sasaya7016/C-tool">MyApp GitHub</a> -->
                 </div>
             </div>
         </div>
