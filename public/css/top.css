@@ -79,7 +79,7 @@ html, body {
 
 .top-github {
   position: absolute;
-  right: 10px;
+  right: 30px;
   top: 25px;
 }
 
@@ -88,16 +88,7 @@ html, body {
   text-decoration:none;
 }
 
-.top-new {
-  position: absolute;
-  right: 100px;
-  top: 25px;
-}
 
-.top-new > a{
-  color:#eee;
-  text-decoration:none;
-}
 
 .top-right {
   position: absolute;
@@ -113,7 +104,6 @@ html, body {
 
 .content {
   width: 100%;
-  /* padding-left: 10px; */
 }
 
 .title {
@@ -123,15 +113,8 @@ html, body {
   font-size: 40px;
   line-height: 70px;
   color: #eee;
-  padding-left: 10px;
+  padding-left: 30px;
 }
-
-
-.m-b-md {
-  margin-bottom: 30px;
-}
-
-
 
 
 /* ---------
@@ -144,308 +127,39 @@ html, body {
 =========================================
 */
 
-div#main_wrapper {
-  width: 960px;
-  height: auto;
-  margin: 30px auto 0 auto;
-}
-
-div#top_pickup {
-  width: 580px;
-  height: 358px;
-  background-color: #fff;
-  float: left;
-  margin-right: 30px;
-  border: 1px solid #dcdddf;
-}
-
-p#pickup_thumb {
-  width: 580px;
-  height: 256px;
-  position: relative;
-  border-bottom: 1px solid #dcdddf;
-}
-
-div#top_pickup img {
-  width: 580px;
-  height: 256px;
-}
-
-
-
-span#pickup_tag {
-  background-color: rgba(246,172,77,0.9);
-  padding: 0 10px;
-  font-size: 14px;
-  color: #fff;
-  width: auto;
-  height: 32px;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-div#top_pickup dl {
-  padding: 15px 20px;
-}
-
-div#top_pickup dl dt {
-  line-height: 27px;
-}
-
-div#top_pickup dl dt a {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-div#top_pickup dl dd {
-  font-size: 12px;
-  font-weight: bold;
-  color: #dcdddf;
-}
-
-/* ========================================
-  ランキング
-========================================= */
-
-div#top_ranking {
-  width: 348px;
-  height: 360px;
-  float: left;
-
-}
-
-div#top_ranking h2 {
-  font-size: 18px;
-  font-weight: bold;
-  padding-left: 37px;
-  border-bottom: 1px solid #dcdddf;
-  height: 30px;
-}
-
-div#top_ranking p {
-  font-size: 10px;
-}
-
-div#top_ranking img {
-  width: 89px;
-  height: 55px;
-}
-
-
-
-div#top_ranking ul li{
-  width: 348px;
-  height: 55px;
-  border-bottom: 1px dotted #dcdddf;
-  margin-top: 15px;
-  padding-bottom: 14px;
-}
-
-div#top_ranking ul li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-div#top_ranking ul li dl dt {
-  width: 89px;
-  height: 55px;
-  float: left;
-  margin-right: 10px;
-  position: relative;
-}
-
-span.ranking_number {
-  font-size: 12px;
-  font-weight: bold;
-  background-color: #434343;
-  border: 1px solid #fff;
-  color: #fff;
-  width: 19px;
-  height: 19px;
-  display: inline-block;
-  text-align: center;
-  line-height: 19px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-div#top_ranking ul li dl dd {
-  float: left;
-  width: auto;
-  height: 55px;
-}
-
-div#top_ranking ul li dl dd h3 a {
-  font-size: 13px;
-  font-weight: bold;
-
-}
-
-span.ranking_tag {
-  color: #fff;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 0 3px;
-}
-
-span.webdesign {
-  background-color: #f6ac4d;
-}
-
-span.wordpress {
-  background-color: #e18c7c;
-}
-
-span.webmarketing {
-  background-color: #acd598;
-}
-
-
-/* ========================================
-  レフト
-========================================= */
-div#top_left {
-  width: 280px;
-  height: auto;
-  float: left;
-  margin-top: 30px;
-}
-
-div#top_category {
-  width: 240px;
-  height: auto;
-  background-color: #fff;
-  padding: 10px;
-  border: 10px solid #dcdddf;
-  margin-bottom: 30px;
-}
-
-div#top_category h3 {
-  font-size: 18px;
-  font-weight: bold;
-  padding-left: 25px;
-  border-bottom: 1px dotted #dcdddf;
-  margin-bottom: 10px;
-}
-
-div#top_category ul li {
-  font-size: 13px;
-  margin-bottom: 19px;
-  line-height: 1;
-}
-
-div#top_category ul li:last-child {
-  margin-bottom: 0;
-}
-
-/* ========================================
-  ライト
-========================================= */
-div#top_right {
-  width: 650px;
-  height: auto;
-  float: right;
-  margin-top: 30px;
-
-
-}
-
-div#top_right h3 {
-  font-size: 22px;
-  font-weight: bold;
-  padding-left: 30px;
-}
-
-div#top_right img {
-  width: 247px;
-  height: 152px;
-}
-
-
-div#top_right ul#post_list li {
-  width: 650px;
-  height: 152px;
-  background-color: #fff;
-  border: 1px solid #dcdddf;
-  margin-bottom: 30px;
-}
-
-div#top_right ul#post_list li dl dt {
-  width: 247px;
-  height: 152px;
-  float: left;
-  margin-right: 20px;
-  position: relative;
-}
-
-div#top_right span.new_category_tag {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 0 10px;
-  width: auto;
-  height: 34px;
-  background-color: rgba(246,172,77,0.9);
-  display: inline-block;
-  color: #fff;
-  line-height: 34px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-div#top_right dl dd {
-  padding: 20px 20px 0 0;
-}
-
-div#top_right h4 a {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 23px;
-}
-
-span.new_date {
-  color: #dcdddf;
-  font-size: 12px;
-  padding-left: 18px;
-}
-
-span.new_tag {
-  color: #dcdddf;
-  font-size: 12px;
-  padding-left: 18px;
-  margin-left: 15px;
-}
-
-div#top_right p {
-  font-size: 13px;
-  line-height: 21px;
-  margin-top: 10px;
-}
-
-div#top_right p a {
-  color: #f6ac4d;
-  text-decoration: underline;
-}
-
-
-
-/* ========================================
-  フッター
-========================================= */
-footer {
+div#main_content {
   width: 100%;
-  height: 100px;
-  background-color: #333;
-  border-top: 1px solid #dcdddf;
-  padding: 20px 0;
-  margin-top: 60px;
+  height: calc(100vh - 70px);
+  background-color: #eee;
+  display: flex;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  /* background-image: url(/images/blog/top-image.jpeg);
+  background-size: cover; */
 }
 
-div#footer_inner {
-  width: 960px;
-  height: auto;
-  margin: 0 auto;
+div#main_content_left {
+  width: 40%;
+  height: 100%;
+  background-image: url(/images/blog/top-image1.jpeg);
+  background-size: cover;
+}
+
+div#main_content_right {
+  width: 60%;
+  background-color: #eee;
+}
+
+.main_content_list {
+  width: 100%;
+  text-align: center;
+  margin-top: 40%;
+  font-size: 40px;
+}
+
+
+div#main_content_right ul li a {
+  color: #333;
+  text
 }

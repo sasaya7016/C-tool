@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'post'], function(){
+  Route::get('blog', 'PostFormController@blog')->name('post.blog');
   Route::get('index', 'PostFormController@index')->name('post.index');
   Route::get('create', 'PostFormController@create')->name('post.create');
   Route::post('store', 'PostFormController@store')->name('post.store');
@@ -29,7 +30,7 @@ Route::group(['prefix' => 'post'], function(){
 });
 
 Route::resource('post', 'PostFormController')->only([
-    'index', 'show'
+    'index', 'show','blog'
 ]);
 
 
