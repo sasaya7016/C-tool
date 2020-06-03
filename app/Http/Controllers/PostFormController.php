@@ -16,7 +16,14 @@ class PostFormController extends Controller
      */
     public function index()
     {
-        return view('post.index');
+        $posts = DB::table('post_forms')
+        ->select('id', 'post_date', 'title','keyword1', 'keyword2')
+        ->orderBy('created_at', 'desc')
+        ->get();
+      
+
+
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -59,7 +66,9 @@ class PostFormController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = PostForm::find($id);
+
+        return view('post.show', compact('post'));
     }
 
     /**
@@ -70,7 +79,9 @@ class PostFormController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = PostForm::find($id);
+
+        return view('post.edit', compact('post'));
     }
 
     /**
@@ -82,7 +93,18 @@ class PostFormController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = PostForm::find($id);
+
+        $post->post_date = $request->input('post_date');
+        $post->title = $request->input('title');
+        $post->image = $request->input('image');
+        $post->keyword1 = $request->input('keyword1');
+        $post->keyword2 = $request->input('keyword2');
+        $post->content = $request->input('content');
+
+        $post->save();
+
+        return redirect('post/index');
     }
 
     /**
@@ -93,6 +115,9 @@ class PostFormController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = PostForm::find($id);
+        $post->delete();
+
+        return redirect('post/index');
     }
 }
