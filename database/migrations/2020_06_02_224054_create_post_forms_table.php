@@ -14,7 +14,7 @@ class CreatePostFormsTable extends Migration
     public function up()
     {
         Schema::create('post_forms', function (Blueprint $table) {
-            $table->increments('article_id');
+            $table->increments('id');
             $table->date('post_date'); 
             $table->text('title');
             $table->text('image');

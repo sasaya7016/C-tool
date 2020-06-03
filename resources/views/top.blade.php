@@ -17,7 +17,7 @@
                 <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
             </div>
             <div class="top-new">
-                <a href="{{ url('post/create') }}">post</a>
+                <a href="{{ url('post/index') }}">post</a>
             </div>
 
             @if (Route::has('login'))
@@ -134,7 +134,7 @@
 				</div>
 			</div>
 			<div id="top_right">
-				<h3>新着記事一覧</h3>
+				<h3><a href="{{ url('post/index') }}">新着記事一覧</a></h3>
 				<ul id="post_list">
 					<li class="cf">
 						<dl>

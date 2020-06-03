@@ -42,6 +42,7 @@
     </div>
 </div>
 
+
 <body>
 
 <div class="container">
@@ -54,35 +55,34 @@
             @endif
             <h2>ブログ記事投稿・編集</h2>
 
-            <form method="POST" action="{{route('post.store')}}">
-                @csrf
+            <form method="POST" action="{{url('post/update' ,['id' =>$post->id])}}">
                 <div class="form-group">
                     <label>日付</label>
-                    <input class="form-control" name="post_date" size="20" value="" placeholder="日付を入力して下さい。">
+                    <input class="form-control" name="post_date" size="20" value="{{ $post->post_date }}" placeholder="日付を入力して下さい。">
                 </div>
                 <div class="form-group">
                     <label>タイトル</label>
-                    <input class="form-control" name="title" value="" placeholder="タイトルを入力して下さい。">
+                    <input class="form-control" name="title" value="{{ $post->title }}" placeholder="タイトルを入力して下さい。">
                 </div>
 
                 <div class="form-group">
                     <label>キーワード1</label>
-                    <input class="form-control" name="keyword1" value="" placeholder="keyword1">
+                    <input class="form-control" name="keyword1" value="{{ $post->keyword1 }}" placeholder="keyword1">
                 </div>
 
                 <div class="form-group">
                     <label>キーワード2</label>
-                    <input class="form-control" name="keyword2" value="" placeholder="keyword2">
+                    <input class="form-control" name="keyword2" value="{{ $post->keyword2 }}" placeholder="keyword2">
                 </div>
                 
                 <div class="form-group">
                     <label>画像</label>
-                    <input class="form-control" type="file" name="image" value="">
+                    <input class="form-control" type="file" name="image" value="{{ $post->image }}">
                 </div>
 
                 <div class="form-group">
                     <label>本文</label>
-                    <textarea class="form-control" rows="15" name="content" placeholder="本文を入力してください。"></textarea>
+                    <textarea class="form-control" rows="15" name="content" placeholder="本文を入力してください。">{{ $post->content }}</textarea>
                 </div>
    
                 <input type="submit" class="btn btn-primary btn-sm" value="送信">
