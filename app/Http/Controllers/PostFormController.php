@@ -14,6 +14,23 @@ class PostFormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function blog()
+    {
+        $posts = DB::table('post_forms')
+        ->select('id', 'post_date', 'title','keyword1', 'keyword2', 'image', 'content', 'category')
+        ->orderBy('created_at', 'desc')
+        ->get();
+        return view('post.blog', compact('posts'));
+
+        
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $posts = DB::table('post_forms')
@@ -48,6 +65,7 @@ class PostFormController extends Controller
 
         $post->post_date = $request->input('post_date');
         $post->title = $request->input('title');
+        $post->category = $request->input('category');
         $post->image = $request->input('image');
         $post->keyword1 = $request->input('keyword1');
         $post->keyword2 = $request->input('keyword2');
@@ -97,6 +115,7 @@ class PostFormController extends Controller
 
         $post->post_date = $request->input('post_date');
         $post->title = $request->input('title');
+        $post->category = $request->input('category');
         $post->image = $request->input('image');
         $post->keyword1 = $request->input('keyword1');
         $post->keyword2 = $request->input('keyword2');
