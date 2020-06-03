@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/css/top.css' }}">
+    <link rel="stylesheet" href="{{ '/css/blog.css' }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <title>C-tool</title>
@@ -46,7 +47,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">BULLETIN BOARD(掲示板) ▶︎Mail-address: test@test.com /  Password: testtest テストログインに使用ください</div>
+                <div class="card-header">投稿一覧</div>
 
                 <div class="card-body">
                     @if (session('status'))
