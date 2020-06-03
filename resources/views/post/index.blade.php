@@ -46,7 +46,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">BULLETIN BOARD(掲示板) ▶︎Mail-address: test@test.com /  Password: testtest テストログインに使用ください</div>
+                <div class="card-header">投稿一覧</div>
 
                 <div class="card-body">
                     @if (session('status'))
