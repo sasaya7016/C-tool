@@ -27,7 +27,7 @@
                     <input class="btn btn-info" type="submit" value="変更する">
                     </form>
 
-                    <form method="post" action="{{ url('contact/destroy', ['id' =>$contact->id]) }}" id="delete_{{ $contact->id}}">
+                    <form method="Post" action="{{ url('contact/destroy', ['id' =>$contact->id]) }}" id="delete_{{ $contact->id}}">
                     @csrf
                     <a href="#" class="btn btn-danger" data-id="{{ $contact->id }}" onclick="deletePost(this);" >削除する</a>
                     </form>
