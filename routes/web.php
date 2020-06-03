@@ -27,16 +27,10 @@ Route::group(['prefix' => 'post'], function(){
   Route::post('update/{id}', 'PostFormController@update')->name('post.update');
   Route::post('destroy/{id}', 'PostFormController@destroy')->name('post.destroy');
 });
+
 Route::resource('post', 'PostFormController')->only([
     'index', 'show'
 ]);
-
-
-Route::group(['prefix' => 'products'], function(){
-  Route::get('index', 'ProductController@index')->name('products.index');
-});
-
-
 
 
 Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
@@ -56,3 +50,5 @@ Route::resource('contact', 'ContactFormController')->only([
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
