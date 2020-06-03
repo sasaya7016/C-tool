@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/css/top.css' }}">
+    <link rel="stylesheet" href="{{ '/css/blog.css' }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <title>C-tool</title>
@@ -70,6 +71,12 @@
                 <div class="form-group">
                     <label>タイトル</label>
                     {{ $post->title }}
+                   
+                </div>
+
+                <div class="form-group">
+                    <label>カテゴリー</label>
+                    {{ $post->category }}
                    
                 </div>
 
