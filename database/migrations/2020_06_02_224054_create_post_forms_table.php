@@ -18,7 +18,7 @@ class CreatePostFormsTable extends Migration
             $table->date('post_date'); 
             $table->text('title');
             $table->text('image');
-            // $table->text('category');
+            $table->text('category');
             $table->text('keyword1');
             $table->text('keyword2');
             $table->text('content');
