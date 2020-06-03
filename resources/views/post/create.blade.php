@@ -18,7 +18,7 @@
         <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
     </div>
     <div class="top-new">
-        <a href="{{ url('post/create') }}">post</a>
+        <a href="{{ url('post/index') }}">post</a>
     </div>
 
     @if (Route::has('login'))
@@ -37,7 +37,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Blog  C-tool
+            <a href="{{ url('/') }}">Blog  C-tool<a>
         </div>
     </div>
 </div>
