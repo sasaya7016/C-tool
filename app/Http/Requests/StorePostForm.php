@@ -26,7 +26,7 @@ class StorePostForm extends FormRequest
         return [
             'post_date' => 'required|date',
             'title'     => 'required|text|max:255',
-            'image'     => 'required|text',
+            // 'image'     => 'required|string',
             'keyword1'     => 'required|text',
             'keyword2'     => 'required|text',
             'content'      => 'required|text|max:10000'
