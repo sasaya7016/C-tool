@@ -34,7 +34,7 @@ class PostFormController extends Controller
     public function index()
     {
         $posts = DB::table('post_forms')
-        ->select('id', 'post_date', 'title','keyword1', 'keyword2')
+        ->select('id', 'post_date', 'title','keyword1', 'keyword2','image')
         ->orderBy('created_at', 'desc')
         ->get();
       
