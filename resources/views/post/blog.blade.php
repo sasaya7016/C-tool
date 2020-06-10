@@ -130,7 +130,7 @@
 					</ul>
 				</div>
 				<div id="top_ad">
-                    <img src="#"" alt="">
+                    <img src="#" alt="">
                     <p>管理者:ナオピー</p>
 				</div>
 			</div>
@@ -151,7 +151,72 @@
 								<p>{{ $post->content }}<a href="{{ url('post/show', ['id' =>$post->id]) }}">...続きを読む</a></p>
 							</dd>
 						</dl>
+          </li>
+
+          <li class="cf">
+						<dl>
+							<dt>
+								<img src="/images/blog/php.png" alt="新着記事1の画像">
+								<span class="new_category_tag     ">プログラミング学習</span>
+							</dt>
+							<dd>
+								<h4><a href="#">PHP勉強はじめました！！</a></h4>
+								<span class="new_date">2020年5月25日</span>
+								<span class="new_tag">PHP,Laravel</span>
+								<p>勉強しはじめました<a href="#">...続きを読む</a></p>
+							</dd>
+						</dl>
 					</li>
+
+					<li class="cf">
+						<dl>
+							<dt>
+								<img src="/images/blog/portfolio.jpg" alt="新着記事1の画像">
+								<span class="new_category_tag     ">就活</span>
+							</dt>
+							<dd>
+								<h4><a href="#">管理者のPortfolioサイト作成しました！</a></h4>
+								<span class="new_date">2020年5月24日</span>
+								<span class="new_tag">GitHub</span>
+								<p>Laravelを使用してBLOGアプリを作成中です。<a href="#">...続きを読む</a></p>
+							</dd>
+						</dl>
+					</li>
+
+					<li class="cf">
+						<dl>
+							<dt>
+								<img src="/images/blog/varenta.jpg" alt="新着記事1の画像">
+								<span class="new_category_tag     ">アプリ開発</span>
+							</dt>
+							<dd>
+								<h4><a href="#">Ruby on Railsで美容院風HP作成中</a></h4>
+								<span class="new_date">2020年5月20日</span>
+								<span class="new_tag">Ruby,Ruby on Rails</span>
+								<p>作成中です<a href="#">...続きを読む</a></p>
+							</dd>
+						</dl>
+					</li>
+
+					<li class="cf">
+						<dl>
+							<dt>
+								<img src="/images/blog/hashliteral.jpg" alt="新着記事1の画像">
+								<span class="new_category_tag     ">プログラミング学習</span>
+							</dt>
+							<dd>
+								<h4><a href="#">フリマアプリ「Hash-Literal」</a></h4>
+								<span class="new_date">2020年4月27日</span>
+								<span class="new_tag">Ruby on Rails,アジャイル開発</span>
+								<p>スクールにて、６人グループで作成したアプリです。<a href="#">...続きを読む</a></p>
+							</dd>
+						</dl>
+					</li>
+          
+
+
+
+
         </ul>
         @endforeach
 			</div>
