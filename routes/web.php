@@ -27,6 +27,7 @@ Route::group(['prefix' => 'post'], function(){
   Route::get('edit/{id}', 'PostFormController@edit')->name('post.edit');
   Route::post('update/{id}', 'PostFormController@update')->name('post.update');
   Route::post('destroy/{id}', 'PostFormController@destroy')->name('post.destroy');
+  Route::post('/upload', 'PostController@upload')->name('post.upload');;
 });
 
 Route::resource('post', 'PostFormController')->only([
