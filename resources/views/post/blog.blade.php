@@ -3,8 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ '/css/top.css' }}">
-        <link rel="stylesheet" href="{{ '/css/blog.css' }}">
+				@if(app('env') == 'production')
+						<link rel="stylesheet" href="{{ secure_asset('/css/top.css') }}">
+						<link rel="stylesheet" href="{{ secure_asset('/css/blog.css') }}">
+				@else
+						<link rel="stylesheet" href="{{ '/css/top.css' }}">
+						<link rel="stylesheet" href="{{ '/css/blog.css' }}">
+				@endif
 
         <title>C-tool</title>
 
