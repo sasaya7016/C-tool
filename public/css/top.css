@@ -142,7 +142,7 @@ div#main_content {
 div#main_content_left {
   width: 40%;
   height: 100%;
-  background-image: url(/images/blog/top-image1.jpeg);
+  background-image: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80);
   background-size: cover;
 }
 
