@@ -94,6 +94,7 @@
                 <input type="submit" class="btn btn-primary btn-sm" value="送信">
                 {{--CSRFトークンが生成される--}}
                 {{ csrf_field() }}
+                <a href="{{ url('post/index') }}">戻る</a>
             </form>
         </div>
     </div>

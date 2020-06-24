@@ -180,13 +180,13 @@ sup {
 }
 
 a {
-  color: #3490dc;
+  color: #bbb;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #1d68a7;
+  color: #999;
   text-decoration: underline;
 }
 
@@ -584,10 +584,10 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px; */
+  /* padding-left: 30px; */
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto; 
 }
 
 @media (min-width: 576px) {
@@ -4544,7 +4544,6 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
 }
 
 .navbar .container,
@@ -4561,11 +4560,8 @@ input[type=button].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.32rem;
-  padding-bottom: 0.32rem;
-  margin-right: 1rem;
-  font-size: 1.125rem;
-  line-height: inherit;
+  font-size: 40px;
+  line-height: 70px;
   white-space: nowrap;
 }
 
@@ -4875,7 +4871,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #eee;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -4884,7 +4880,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: #eee;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -7079,7 +7075,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #333 !important;
 }
 
 .bg-transparent {

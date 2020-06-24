@@ -54,65 +54,65 @@
                      {{ session('status') }}
                 </div>
             @endif
-            <h2>ブログ記事投稿・編集</h2>
+            <div class="card">
+                <div class="card-header">ブログ記事投稿・編集</div>
+                <div class="card-body">
 
-            showです
+                    <form method="GET" action="{{ url('post/edit', ['id' =>$post->id]) }}">
+                        @csrf
+                        <div class="form-group">
+                            <label>日付</label>
+                            {{ $post->post_date }}
+                    
+                        </div>
+                        <div class="form-group">
+                            <label>タイトル</label>
+                            {{ $post->title }}
+                        
+                        </div>
+
+                        <div class="form-group">
+                            <label>カテゴリー</label>
+                            {{ $post->category }}
+                        
+                        </div>
+
+                        <div class="form-group">
+                            <label>キーワード1</label>
+                            {{ $post->keyword1 }}
+                    
+                        </div>
+
+                        <div class="form-group">
+                            <label>キーワード2</label>
+                            {{ $post->keyword2 }}
+                    
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>画像</label>
+                            {{ $post->image }}
             
-          
+                        </div>
 
+                        <div class="form-group">
+                            <label>本文</label>
+                            {{ $post->content }}
+                        </div>
+        
+                        <input type="submit" class="btn btn-primary btn-sm" value="編集">
+                        {{--CSRFトークンが生成される--}}
+                        {{ csrf_field() }}
 
-            <form method="GET" action="{{ url('post/edit', ['id' =>$post->id]) }}">
-                @csrf
-                <div class="form-group">
-                    <label>日付</label>
-                    {{ $post->post_date }}
-            
+                    </form>
+
+                    <form method="POST" action="{{ url('post/destroy', ['id' =>$post->id]) }}" id="delete_{{ $post->id}}">
+                        @csrf
+                        <a href="#" class="btn btn-danger" data-id="{{ $post->id }}" onclick="deletePost(this);" >削除</a>
+                        <a href="{{ url('post/index') }}">戻る</a>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>タイトル</label>
-                    {{ $post->title }}
-                   
-                </div>
-
-                <div class="form-group">
-                    <label>カテゴリー</label>
-                    {{ $post->category }}
-                   
-                </div>
-
-                <div class="form-group">
-                    <label>キーワード1</label>
-                    {{ $post->keyword1 }}
-             
-                </div>
-
-                <div class="form-group">
-                    <label>キーワード2</label>
-                    {{ $post->keyword2 }}
-               
-                </div>
-                
-                <div class="form-group">
-                    <label>画像</label>
-                    {{ $post->image }}
-      
-                </div>
-
-                <div class="form-group">
-                    <label>本文</label>
-                    {{ $post->content }}
-                </div>
-   
-                <input type="submit" class="btn btn-primary btn-sm" value="編集">
-                {{--CSRFトークンが生成される--}}
-                {{ csrf_field() }}
-
-            </form>
-
-            <form method="POST" action="{{ url('post/destroy', ['id' =>$post->id]) }}" id="delete_{{ $post->id}}">
-                @csrf
-                <a href="#" class="btn btn-danger" data-id="{{ $post->id }}" onclick="deletePost(this);" >削除</a>
-            </form>
+             </div>
         </div>
     </div>
 </div>
