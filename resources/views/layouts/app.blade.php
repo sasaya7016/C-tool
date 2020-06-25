@@ -18,15 +18,17 @@
 
     <!-- Styles -->
     @if(app('env') == 'production')
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ '/css/auth.css' }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('/css/auth.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/top.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/blog.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('/css/post.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ '/css/auth.css' }}">
         <link rel="stylesheet" href="{{ '/css/top.css' }}">
         <link rel="stylesheet" href="{{ '/css/blog.css' }}">
+        <link rel="stylesheet" href="{{ '/css/post.css' }}">
     @endif
 
 
