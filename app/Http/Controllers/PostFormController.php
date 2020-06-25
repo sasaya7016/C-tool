@@ -39,7 +39,6 @@ class PostFormController extends Controller
         ->get();
       
 
-
         return view('post.index', compact('posts'));
     }
 
