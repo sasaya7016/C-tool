@@ -15,26 +15,28 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat" rel="stylesheet">
+  
     <!-- Styles -->
     @if(app('env') == 'production')
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/auth.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/top.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/blog.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('/css/post.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
         <link rel="stylesheet" href="{{ '/css/auth.css' }}">
         <link rel="stylesheet" href="{{ '/css/top.css' }}">
         <link rel="stylesheet" href="{{ '/css/blog.css' }}">
         <link rel="stylesheet" href="{{ '/css/post.css' }}">
     @endif
-
-
-    
-    
 </head>
+
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -58,6 +60,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('post/blog') }}">{{ __('Blog') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('post/index') }}">{{ __('Post') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/sasaya7016/C-tool">{{ __('GitHub') }}</a>
+                        </li>
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
