@@ -1,7 +1,47 @@
-@extends('layouts.app')
-  @include('nav')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/css/top.css' }}">
+    <link rel="stylesheet" href="{{ '/css/blog.css' }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-@section('content')
+    <title>C-tool</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="flex-center position-ref full-height">
+    <div class="top-github">
+        <a href="https://github.com/sasaya7016/C-tool">GitHub</a>
+    </div>
+    <div class="top-new">
+        <a href="{{ url('post/index') }}">post</a>
+    </div>
+
+    @if (Route::has('login'))
+        <div class="top-right">
+            @auth
+                <a href="{{ url('/home') }}">Home&nbsp;</a>
+            @else
+                <a href="{{ route('login') }}">Login &nbsp;</a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}">Register&nbsp;</a>
+                @endif
+            @endauth
+        </div>
+    @endif
+
+    <div class="content">
+        <div class="title m-b-md">
+            <a href="{{ url('/') }}">Blog  C-tool<a>
+        </div>
+    </div>
+</div>
 
 <div class="container cont-p">
     <div class="row justify-content-center">

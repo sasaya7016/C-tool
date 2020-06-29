@@ -144,6 +144,12 @@ html, body {
 =========================================
 */
 
+div#main {
+  position: fixed;
+  top: 70px;
+  left: 200px;
+}
+
 div#main_wrapper {
   width: 960px;
   height: auto;

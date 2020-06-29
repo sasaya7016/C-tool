@@ -1,9 +1,12 @@
 @extends('layouts.app')
+  @include('nav')
 
 @section('content')
 
 
-<div class="container">
+
+
+<div class="container cont-p">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('status'))
@@ -13,7 +16,7 @@
             @endif
             <h2>ブログ記事投稿・編集</h2>
 
-            <form method="POST" action="{{route('post.store')}}">
+            <form method="POST" enctype="multipart/form-data" action="{{route('post.store')}}">
                 @csrf
                 <div class="form-group">
                     <label>日付</label>

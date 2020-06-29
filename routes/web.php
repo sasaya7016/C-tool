@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('top');
-});
-
+// Route::get('/', function () {
+//     return view('top');
+// });
+Route::get('/', 'PostFormController@blog');
 
 Route::group(['prefix' => 'post'], function(){
   Route::get('blog', 'PostFormController@blog')->name('post.blog');

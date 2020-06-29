@@ -1,10 +1,11 @@
 @extends('layouts.app')
+  @include('nav')
 
 @section('content')
 
 
 
-<div class="container">
+<div class="container cont-p">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('status'))
