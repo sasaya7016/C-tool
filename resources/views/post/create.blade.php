@@ -49,7 +49,7 @@
 
                 <div class="form-group">
                     <label>本文</label>
-                    <textarea class="form-control" rows="15" name="content" placeholder="本文を入力してください。"></textarea>
+                    <textarea class="form-control" rows="15" name="content"  placeholder="本文を入力してください。"></textarea>
                 </div>
    
                 <input type="submit" class="btn btn-primary btn-sm" value="送信">
