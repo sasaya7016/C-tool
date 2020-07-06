@@ -22,6 +22,7 @@ class CreatePostFormsTable extends Migration
             $table->text('keyword1');
             $table->text('keyword2');
             $table->text('content');
+            $table->integer('user_id');
             $table->softDeletes(); 
             $table->timestamps();
         });
