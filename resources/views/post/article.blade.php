@@ -5,7 +5,8 @@
     <li class="cf">
       <dl>
         <dt>
-          <img src="/storage/{{$post->title}}" alt="新着記事1の画像">
+          <img src="{{ asset('storage/' . $post->image) }}">
+      
           <span class="new_category_tag">{{$post->category}}</span>
         </dt>
         <dd>
