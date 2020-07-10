@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PostForm;
+use Auth;
+use Validator;
 
 use Illuminate\Support\Facades\DB;
 
@@ -60,8 +62,17 @@ class PostFormController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new PostForm;
+        $validator = Validator::make($request->all() , ['content' => 'required|max:255', 'image' => 'required']);
 
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+
+
+
+        $post = new PostForm;
         $post->post_date = $request->input('post_date');
         $post->title = $request->input('title');
         $post->category = $request->input('category');
@@ -69,8 +80,11 @@ class PostFormController extends Controller
         $post->keyword1 = $request->input('keyword1');
         $post->keyword2 = $request->input('keyword2');
         $post->content = $request->input('content');
+        $post->user_id = Auth::user()->id;
 
         $post->save();
+
+        $request->image->storeAs('public/images', $post->id . '.jpg');
 
         return redirect('post/index');
     }
