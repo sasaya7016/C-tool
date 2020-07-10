@@ -44,7 +44,7 @@
                 
                 <div class="form-group">
                     <label>画像</label>
-                    <input class="form-control" type="file" name="image" value="">
+                    <input class="form-control" type="file" name="image" value="" accept="image/jpeg,image/gif,image/png" />
                 </div>
 
                 <div class="form-group">
