@@ -5,7 +5,11 @@
     <li class="cf">
       <dl>
         <dt>
-          <img src="{{ asset('storage/' . $post->image) }}">
+          @if ($post->user->profile_photo)
+            <img class="post-profile-icon round-img" src="{{ asset('storage/user_images/' . $post->user->profile_photo) }}"/>
+          @else
+            <img class="post-profile-icon round-img" src="{{ asset('/images/blank_profile.png') }}"/>
+          @endif
       
           <span class="new_category_tag">{{$post->category}}</span>
         </dt>
