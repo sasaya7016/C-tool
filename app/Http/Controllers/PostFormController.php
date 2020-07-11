@@ -19,7 +19,7 @@ class PostFormController extends Controller
     public function blog()
     {
         $posts = DB::table('post_forms')
-        ->select('id', 'post_date', 'title','keyword1', 'keyword2', 'image', 'content', 'category')
+        ->select('id', 'post_date', 'title','keyword1', 'keyword2', 'content', 'category')
         ->orderBy('created_at', 'desc')
         ->get();
         return view('post.blog', compact('posts'));
@@ -36,7 +36,7 @@ class PostFormController extends Controller
     public function index()
     {
         $posts = DB::table('post_forms')
-        ->select('id', 'post_date', 'title','keyword1', 'keyword2','image')
+        ->select('id', 'post_date', 'title','keyword1', 'keyword2')
         ->orderBy('created_at', 'desc')
         ->get();
       
@@ -62,7 +62,7 @@ class PostFormController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all() , ['content' => 'required|max:255', 'image' => 'required']);
+        $validator = Validator::make($request->all() , ['content' => 'required|max:255']);
 
         //バリデーションの結果がエラーの場合
         if ($validator->fails())
@@ -76,7 +76,7 @@ class PostFormController extends Controller
         $post->post_date = $request->input('post_date');
         $post->title = $request->input('title');
         $post->category = $request->input('category');
-        $post->image = $request->input('image');
+        // $post->image = $request->input('image');
         $post->keyword1 = $request->input('keyword1');
         $post->keyword2 = $request->input('keyword2');
         $post->content = $request->input('content');
@@ -84,7 +84,7 @@ class PostFormController extends Controller
 
         $post->save();
 
-        $request->image->storeAs('public/images', $post->id . '.jpg');
+        // $request->image->storeAs('public/images', $post->id . '.jpg');
 
         return redirect('post/index');
     }
@@ -129,7 +129,6 @@ class PostFormController extends Controller
         $post->post_date = $request->input('post_date');
         $post->title = $request->input('title');
         $post->category = $request->input('category');
-        $post->image = $request->input('image');
         $post->keyword1 = $request->input('keyword1');
         $post->keyword2 = $request->input('keyword2');
         $post->content = $request->input('content');

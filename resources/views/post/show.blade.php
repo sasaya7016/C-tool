@@ -48,11 +48,11 @@
                     
                         </div>
                         
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>画像</label>
                             {{ $post->image }}
             
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <label>本文</label>

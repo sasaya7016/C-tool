@@ -41,10 +41,10 @@
                     <input class="form-control" name="keyword2" value="{{ $post->keyword2 }}" placeholder="keyword2">
                 </div>
                 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>画像</label>
                     <input class="form-control" type="file" name="image" value="{{ $post->image }}">
-                </div>
+                </div> -->
 
                 <div class="form-group">
                     <label>本文</label>
